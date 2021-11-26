@@ -1,0 +1,33 @@
+{
+  "name": "p3_ohmyfood_becker_nathan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --config webpack.config.js --mode production",
+    "serve": "webpack --config webpack.config.js --watch --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beckernathan52/P3_Ohmyfood_Becker_Nathan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beckernathan52/P3_Ohmyfood_Becker_Nathan/issues"
+  },
+  "homepage": "https://github.com/beckernathan52/P3_Ohmyfood_Becker_Nathan#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.0",
+    "css-loader": "^6.5.1",
+    "mini-css-extract-plugin": "^2.4.5",
+    "node-sass": "^6.0.1",
+    "postcss": "^8.4.3",
+    "postcss-loader": "^6.2.1",
+    "sass-loader": "^12.3.0",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-remove-empty-scripts": "^0.7.1"
+  }
+}
