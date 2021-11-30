@@ -1,0 +1,21 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "menu.scss",
+        "main.scss",
+        "base/_reset.scss",
+        "abstracts/_functions.scss",
+        "abstracts/_variables.scss",
+        "abstracts/_mixins.scss",
+        "base/_typography.scss",
+        "base/_base.scss",
+        "components/_buttons.scss",
+        "components/_animations.scss",
+        "layout/_flex.scss",
+        "layout/_footer.scss",
+        "layout/_header.scss"
+    ],
+    "names": [],
+    "file": "menu.css"
+}
