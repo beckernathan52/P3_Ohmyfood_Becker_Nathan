@@ -1,6 +1,10 @@
 /*!**********************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./assets/scss/home.scss ***!
   \**********************************************************************************************************************************************************/
+h1 {
+  font-size: 1.6em;
+  flex-basis: 80%; }
+
 a {
   text-decoration: none;
   color: black; }
@@ -83,23 +87,25 @@ header {
 
 #explorer {
   background-color: #F6F6F6;
-  flex-direction: column;
+  flex-direction: row;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   text-align: center;
   padding: 50px 30px;
   row-gap: 20px; }
-  #explorer h1 {
-    margin: 0;
-    font-size: 1.6em; }
   #explorer p {
     font-weight: 300;
     font-size: 1.1em; }
+  #explorer a {
+    flex-basis: 60%; }
 
 #function {
   display: flex;
   flex-direction: column;
-  padding: 25px 15px; }
+  padding: 50px 15px; }
+  #function h2 {
+    padding-bottom: 10px; }
   #function ol {
     display: flex;
     flex-direction: column;
@@ -117,6 +123,10 @@ header {
       align-items: baseline;
       background-color: #f6f6f6;
       box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31); }
+      #function ol li:hover {
+        background-color: #9256dc18; }
+        #function ol li:hover i {
+          color: #9356DC; }
       #function ol li span {
         padding: 2px 7px;
         border-radius: 25px;
@@ -152,6 +162,9 @@ header {
       border-radius: 15px;
       display: flex;
       box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31); }
+      #restaurant div article:nth-child(2) img {
+        -o-object-position: 50% 60%;
+           object-position: 50% 60%; }
       #restaurant div article a {
         display: flex;
         flex-direction: row;
@@ -174,8 +187,9 @@ header {
           bottom: 15px;
           align-items: center; }
           #restaurant div article a div:nth-child(3) i {
-            font-size: 2em;
-            padding: 10px; }
+            font-size: 1.7em;
+            padding: 10px;
+            opacity: 0.7; }
         #restaurant div article a figure {
           display: flex;
           height: 180px;
@@ -187,7 +201,9 @@ header {
             border-top-right-radius: 15px;
             height: 100%;
             -o-object-fit: cover;
-               object-fit: cover; }
+               object-fit: cover;
+            -o-object-position: 50% 90%;
+               object-position: 50% 90%; }
         #restaurant div article a span {
           position: absolute;
           border-radius: 5px;
