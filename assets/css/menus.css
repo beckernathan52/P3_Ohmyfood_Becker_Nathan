@@ -1,0 +1,70 @@
+/*!**********************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./assets/scss/menu.scss ***!
+  \**********************************************************************************************************************************************************/
+a {
+  text-decoration: none;
+  color: black; }
+
+li {
+  list-style: none; }
+
+body {
+  font-family: "roboto";
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto; }
+  body h1, body h2, body h3, body p {
+    margin: 0; }
+
+.btn {
+  border-radius: 25px;
+  padding: 15px;
+  border: none;
+  background: linear-gradient(#FF79DA, #9356DC);
+  font-size: 0.95em;
+  margin: 10px;
+  width: 200px;
+  display: flex;
+  color: white;
+  font-family: 'roboto';
+  flex-basis: 100%;
+  justify-content: center;
+  transition: all 0.4s;
+  box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.4); }
+  .btn:hover {
+    opacity: 0.9;
+    box-shadow: 8px 10px 19px -7px rgba(0, 0, 0, 0.4); }
+
+footer {
+  background-color: #353535;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; }
+  footer span {
+    color: white;
+    font-family: 'shrikhand';
+    font-size: 1.3em; }
+  footer nav {
+    display: flex; }
+    footer nav ul {
+      padding: 0;
+      row-gap: 15px;
+      display: flex;
+      flex-direction: column; }
+      footer nav ul a {
+        color: white; }
+        footer nav ul a i {
+          padding-right: 20px;
+          width: 20px; }
+
+header {
+  display: flex; }
+  header a {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center; }
+    header a img {
+      width: 170px;
+      padding-top: 20px;
+      padding-bottom: 10px; }
+
