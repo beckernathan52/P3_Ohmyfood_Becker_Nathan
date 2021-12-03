@@ -13,10 +13,9 @@ h3{
 header > a:first-child{
     flex-basis: 10%;
     position: absolute;
+    left: 20px;
+    top: 20px;
     i{
-        position: absolute;
-        left: 20px;
-        top: 20px;
         font-size: 1.2em;
     }
 }

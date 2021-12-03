@@ -120,11 +120,12 @@ footer {
           font-size: 0.9em; }
 
 header {
-  display: flex; }
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 100%; }
   header a {
-    display: flex;
-    flex-basis: 100%;
-    justify-content: center; }
+    display: flex; }
     header a img {
       width: 170px;
       padding-top: 20px;
@@ -141,11 +142,10 @@ h3 {
 /* Header */
 header > a:first-child {
   flex-basis: 10%;
-  position: absolute; }
+  position: absolute;
+  left: 20px;
+  top: 20px; }
   header > a:first-child i {
-    position: absolute;
-    left: 20px;
-    top: 20px;
     font-size: 1.2em; }
 
 /* Main */
