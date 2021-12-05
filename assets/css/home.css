@@ -55,7 +55,7 @@ table {
 /* Font Roboto and Shrikhand */
 /* Font Shrikhand */
 h1 {
-  font-size: 1.6em;
+  font-size: 1.5em;
   flex-basis: 80%; }
 
 a {
@@ -70,8 +70,6 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto; }
-  body h1, body h2, body h3, body p {
-    margin: 0; }
 
 .btn {
   border-radius: 25px;
@@ -131,6 +129,20 @@ header {
       padding-top: 20px;
       padding-bottom: 10px; }
 
+h1 {
+  font-weight: bold; }
+
+h2 {
+  font-weight: bold;
+  font-size: 1.5em; }
+
+h3 {
+  font-weight: bold;
+  font-size: 1.1em; }
+
+p {
+  font-weight: 350; }
+
 #location {
   display: flex;
   align-items: center;
@@ -154,7 +166,7 @@ header {
   padding: 50px 30px;
   row-gap: 20px; }
   #explorer p {
-    font-weight: 300;
+    font-weight: 200;
     font-size: 1.1em; }
   #explorer a {
     flex-basis: 60%; }
@@ -164,7 +176,7 @@ header {
   flex-direction: column;
   padding: 50px 15px; }
   #function h2 {
-    padding-bottom: 10px; }
+    padding-bottom: 30px; }
   #function ol {
     display: flex;
     flex-direction: column;
@@ -176,8 +188,8 @@ header {
       border-radius: 20px;
       height: 70px;
       justify-content: flex-start;
-      width: 90%;
-      font-weight: bold;
+      width: 95%;
+      font-weight: 500;
       position: relative;
       align-items: baseline;
       background-color: #f6f6f6;
@@ -187,7 +199,7 @@ header {
         #function ol li:hover i {
           color: #9356DC; }
       #function ol li span {
-        padding: 2px 7px;
+        padding: 4px 7px;
         border-radius: 25px;
         background-color: #9356DC;
         color: white;
@@ -204,10 +216,13 @@ header {
         #function ol li a i {
           padding: 30px;
           color: grey;
-          font-size: 1.1em; }
+          font-size: 1.1em;
+          width: 15px;
+          justify-content: center;
+          display: flex; }
 
 #restaurant {
-  padding: 50px 15px;
+  padding: 70px 15px;
   padding-top: 20px;
   background-color: #f6f6f6; }
   #restaurant h2 {
@@ -220,57 +235,54 @@ header {
       background-color: white;
       border-radius: 15px;
       display: flex;
-      box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31); }
+      box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31);
+      flex-direction: row;
+      flex-wrap: wrap; }
       #restaurant div article:nth-child(2) img {
         -o-object-position: 50% 60%;
            object-position: 50% 60%; }
-      #restaurant div article a {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+      #restaurant div article figure {
+        width: 100%;
         position: relative;
-        flex-basis: 100%; }
-        #restaurant div article a div:nth-child(2) {
-          row-gap: 5px;
-          width: 70%;
-          padding: 15px 15px;
-          align-content: center; }
-          #restaurant div article a div:nth-child(2) p {
-            font-weight: 200; }
-        #restaurant div article a div:nth-child(3) {
+        height: 180px; }
+        #restaurant div article figure img {
+          width: 100%;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          height: 100%;
+          -o-object-fit: cover;
+             object-fit: cover;
+          -o-object-position: 50% 90%;
+             object-position: 50% 90%; }
+        #restaurant div article figure span {
+          position: absolute;
+          border-radius: 2px;
+          background-color: #99e2d0;
+          color: #008766;
+          padding: 7px 12px;
+          font-weight: 450;
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          font-size: 0.9em; }
+      #restaurant div article div {
+        flex-basis: 100%;
+        position: relative;
+        padding: 15px; }
+        #restaurant div article div a {
+          display: flex;
+          flex-direction: column;
+          row-gap: 10px; }
+        #restaurant div article div div {
           width: 20%;
           justify-content: center;
           align-content: flex-end;
           position: absolute;
           right: 0px;
-          bottom: 15px;
+          bottom: 10px;
           align-items: center; }
-          #restaurant div article a div:nth-child(3) i {
-            font-size: 1.7em;
-            padding: 10px;
+          #restaurant div article div div i {
+            font-size: 1.5em;
+            padding: 5px;
             opacity: 0.7; }
-        #restaurant div article a figure {
-          display: flex;
-          height: 180px;
-          margin: 0;
-          width: 100%; }
-          #restaurant div article a figure img {
-            width: 100%;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-            height: 100%;
-            -o-object-fit: cover;
-               object-fit: cover;
-            -o-object-position: 50% 90%;
-               object-position: 50% 90%; }
-        #restaurant div article a span {
-          position: absolute;
-          border-radius: 5px;
-          background-color: #99e2d0;
-          color: #008766;
-          padding: 5px 10px;
-          font-weight: 450;
-          position: absolute;
-          right: 10px;
-          top: 10px; }
 

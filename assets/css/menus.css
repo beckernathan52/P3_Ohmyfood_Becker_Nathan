@@ -55,7 +55,7 @@ table {
 /* Font Roboto and Shrikhand */
 /* Font Shrikhand */
 h1 {
-  font-size: 1.6em;
+  font-size: 1.5em;
   flex-basis: 80%; }
 
 a {
@@ -70,8 +70,6 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto; }
-  body h1, body h2, body h3, body p {
-    margin: 0; }
 
 .btn {
   border-radius: 25px;
@@ -169,7 +167,7 @@ main > div:nth-child(2) {
   display: flex;
   flex-basis: 100%;
   justify-content: space-between;
-  padding: 20px;
+  padding: 15px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   background-color: #f6f6f6;
@@ -188,7 +186,7 @@ section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 15px;
   row-gap: 20px; }
   section h2 {
     display: flex;
