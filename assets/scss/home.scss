@@ -114,6 +114,7 @@ p{
     background-color: #f6f6f6;
     h2{
         margin: 30px 0px;
+        flex-basis: 100%;
     }
     div{
         display: flex;
@@ -126,7 +127,7 @@ p{
             box-shadow: 2px 6px 19px -7px rgba(0,0,0,0.31);
             flex-direction: row;
             flex-wrap: wrap;
-            &:nth-child(2) img{
+            &:nth-child(3) img{
                 object-position: 50% 60%;
             }
             figure{
@@ -158,10 +159,12 @@ p{
                 flex-basis: 100%;
                 position: relative;
                 padding: 15px;
+                
                 a{
                     display: flex;
                     flex-direction: column;
                     row-gap: 10px;
+                    width: 50%;
                 }
                 div{
                     width: 20%;
@@ -182,3 +185,58 @@ p{
     }
 }
 
+/* Responsive */
+@media screen and (min-width: 475px){
+
+#restaurant article{
+    &:first-child img{
+        object-position: 50% 50%;
+    }
+}
+}
+
+@media screen and (min-width: 550px){
+.btn{
+    max-width: 200px;
+}
+#explorer >p{
+    flex-basis: 90%
+}
+#function{
+    li{
+        max-width: 400px;
+    }
+}
+#restaurant > div{
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    justify-content: space-between;
+    article{
+        flex-basis: 48%;
+         a > img{
+            object-position: 50% 60%;
+        }
+    }
+}
+}
+@media screen and (min-width: 992px){
+
+#function{
+    max-width: 1100px;
+    margin: 0 auto;
+    ol{
+        flex-direction: row;
+        justify-content: space-between;
+        li{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+}
+#restaurant > div{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+}

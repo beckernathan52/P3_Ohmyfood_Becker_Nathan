@@ -4,16 +4,15 @@ footer{
     padding-bottom: 40px;
     display: flex;
     flex-direction: column;
-    a{
+    span{
+        color: white;
+        font-family: 'shrikhand';
+        font-size: 1.2em;
         padding-bottom: 20px;
-    }   
-        span{
-            color: white;
-            font-family: 'shrikhand';
-            font-size: 1.2em;
-        }
+    }
     nav{
         display: flex;
+        padding-top: 20px;
         ul{
             padding: 0;
             row-gap: 15px;
@@ -31,4 +30,11 @@ footer{
             
         }
     }
+}
+@media screen and (min-width: 992px){
+
+footer > div, footer > a{
+    width: 1100px;
+    margin: 0 auto;
+}
 }
