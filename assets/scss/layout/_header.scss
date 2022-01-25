@@ -1,14 +1,9 @@
 header{
     display: flex;
-    position: relative;
     justify-content: center;  
-    width: 100%;
-    a{
-    display: flex;
-        img{
-        width: 170px;
-        padding-top: 20px;
-        padding-bottom: 10px;
-        }
-    }        
+    img{
+    width: 170px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    }      
 }

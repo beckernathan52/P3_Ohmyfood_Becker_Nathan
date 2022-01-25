@@ -82,7 +82,6 @@ body {
   display: flex;
   color: white;
   font-family: 'roboto';
-  flex-basis: 100%;
   justify-content: center;
   transition: all 0.4s;
   box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.4); }
@@ -92,57 +91,43 @@ body {
 
 footer {
   background-color: #353535;
-  padding: 30px 20px;
-  padding-bottom: 40px;
-  display: flex;
-  flex-direction: column; }
+  padding: 30px 20px 40px 20px; }
   footer span {
     color: white;
     font-family: 'shrikhand';
-    font-size: 1.2em;
-    padding-bottom: 20px; }
+    font-size: 1.2em; }
   footer nav {
-    display: flex;
     padding-top: 20px; }
-    footer nav ul {
-      padding: 0;
-      row-gap: 15px;
-      display: flex;
-      flex-direction: column; }
-      footer nav ul a {
+    footer nav li {
+      padding-bottom: 15px; }
+      footer nav li a {
         color: white;
         font-size: 1em; }
-        footer nav ul a i {
+        footer nav li a i {
           padding-right: 10px;
           width: 20px;
           font-size: 0.9em; }
 
 @media screen and (min-width: 992px) {
-  footer > div, footer > a {
+  footer .footer-container {
     width: 1100px;
     margin: 0 auto; } }
 
 header {
   display: flex;
-  position: relative;
-  justify-content: center;
-  width: 100%; }
-  header a {
-    display: flex; }
-    header a img {
-      width: 170px;
-      padding-top: 20px;
-      padding-bottom: 10px; }
+  justify-content: center; }
+  header img {
+    width: 170px;
+    padding-top: 20px;
+    padding-bottom: 10px; }
 
-h1 {
+h1, h2, h3 {
   font-weight: bold; }
 
 h2 {
-  font-weight: bold;
   font-size: 1.5em; }
 
 h3 {
-  font-weight: bold;
   font-size: 1.1em; }
 
 p {
@@ -163,8 +148,8 @@ p {
 
 #explorer {
   background-color: #F6F6F6;
-  flex-direction: row;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
@@ -173,13 +158,9 @@ p {
   #explorer p {
     font-weight: 200;
     font-size: 1.1em; }
-  #explorer a {
-    flex-basis: 60%; }
 
 #function {
-  display: flex;
-  flex-direction: column;
-  padding: 50px 15px; }
+  padding: 50px 20px; }
   #function h2 {
     padding-bottom: 30px; }
   #function ol {
@@ -192,11 +173,9 @@ p {
       display: flex;
       border-radius: 20px;
       height: 70px;
-      justify-content: flex-start;
       width: 95%;
       font-weight: 500;
       position: relative;
-      align-items: baseline;
       background-color: #f6f6f6;
       box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31); }
       #function ol li:hover {
@@ -222,36 +201,31 @@ p {
           padding: 30px;
           color: grey;
           font-size: 1.1em;
-          width: 15px;
-          justify-content: center;
-          display: flex; }
+          width: 15px; }
 
 #restaurant {
-  padding: 70px 15px;
-  padding-top: 20px;
+  padding: 20px 20px 70px 20px;
   background-color: #f6f6f6; }
-  #restaurant h2 {
-    margin: 30px 0px;
-    flex-basis: 100%; }
-  #restaurant div {
+  #restaurant .menu-card-container {
     display: flex;
-    flex-direction: column;
-    row-gap: 20px; }
-    #restaurant div article {
+    flex-direction: row;
+    flex-wrap: wrap; }
+    #restaurant .menu-card-container h2 {
+      margin: 30px 0px;
+      width: 100%; }
+    #restaurant .menu-card-container article {
       background-color: white;
       border-radius: 15px;
-      display: flex;
       box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31);
-      flex-direction: row;
-      flex-wrap: wrap; }
-      #restaurant div article:nth-child(3) img {
+      width: 100%;
+      margin-bottom: 20px; }
+      #restaurant .menu-card-container article:nth-child(3) img {
         -o-object-position: 50% 60%;
            object-position: 50% 60%; }
-      #restaurant div article figure {
-        width: 100%;
+      #restaurant .menu-card-container article figure {
         position: relative;
         height: 180px; }
-        #restaurant div article figure img {
+        #restaurant .menu-card-container article figure img {
           width: 100%;
           border-top-left-radius: 15px;
           border-top-right-radius: 15px;
@@ -260,35 +234,30 @@ p {
              object-fit: cover;
           -o-object-position: 50% 90%;
              object-position: 50% 90%; }
-        #restaurant div article figure span {
+        #restaurant .menu-card-container article figure span {
           position: absolute;
           border-radius: 2px;
           background-color: #99e2d0;
           color: #008766;
           padding: 7px 12px;
           font-weight: 450;
-          position: absolute;
           right: 10px;
           top: 10px;
           font-size: 0.9em; }
-      #restaurant div article div {
-        flex-basis: 100%;
+      #restaurant .menu-card-container article .card-container {
         position: relative;
         padding: 15px; }
-        #restaurant div article div a {
-          display: flex;
-          flex-direction: column;
-          row-gap: 10px;
-          width: 50%; }
-        #restaurant div article div div {
+        #restaurant .menu-card-container article .card-container h3 {
+          padding-bottom: 10px; }
+        #restaurant .menu-card-container article .card-container .heart-like {
           width: 20%;
-          justify-content: center;
-          align-content: flex-end;
           position: absolute;
           right: 0px;
-          bottom: 10px;
-          align-items: center; }
-          #restaurant div article div div i {
+          bottom: 25px;
+          align-items: center;
+          display: flex;
+          justify-content: center; }
+          #restaurant .menu-card-container article .card-container .heart-like i {
             font-size: 1.5em;
             padding: 5px;
             opacity: 0.7; }
@@ -306,15 +275,11 @@ p {
     flex-basis: 90%; }
   #function li {
     max-width: 400px; }
-  #restaurant > div {
-    flex-direction: row;
-    flex-wrap: wrap;
-    -moz-column-gap: 20px;
-         column-gap: 20px;
+  #restaurant .menu-card-container {
     justify-content: space-between; }
-    #restaurant > div article {
+    #restaurant .menu-card-container article {
       flex-basis: 48%; }
-      #restaurant > div article a > img {
+      #restaurant .menu-card-container article a > img {
         -o-object-position: 50% 60%;
            object-position: 50% 60%; } }
 
@@ -328,7 +293,7 @@ p {
       #function ol li {
         margin-left: 20px;
         margin-right: 20px; }
-  #restaurant > div {
+  #restaurant .menu-card-container {
     max-width: 1100px;
     margin: 0 auto; } }
 
