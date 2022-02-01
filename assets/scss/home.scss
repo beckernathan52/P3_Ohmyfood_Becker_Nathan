@@ -19,12 +19,16 @@ p{
     justify-content: center;
     box-shadow: inset -2px 2px 6px rgba(54,54,54,0.2);
     height: 45px;
-    i{
+    label{ 
         padding-right: 15px;
         color: #353535
     }
-    p{
-        color: #353535;
+    input{
+        color: black;
+        border: none;
+        background-color: #EAEAEA;
+        font-size: 15px;
+        width: 100px;
     }
 }
 
@@ -43,7 +47,7 @@ p{
     }
 }
 
-#function{
+#tutorial{
     padding: 50px 20px;
     h2{
         padding-bottom: 30px;
@@ -54,6 +58,7 @@ p{
         row-gap: 20px;
         padding: 0;
         align-items: center;
+        counter-reset: compteListe;
         li{
             display: flex;
             border-radius: 20px;
@@ -63,13 +68,9 @@ p{
             position: relative;
             background-color: #f6f6f6;
             box-shadow: 2px 6px 19px -7px rgba(0,0,0,0.31);
-            &:hover{
-                background-color: #9256dc18;
-                i{
-                    color: $primary-color;
-                }
-        }
-            span{
+            &::before{
+                counter-increment: compteListe 1;
+                content: counter(compteListe);
                 padding: 4px 7px;
                 border-radius: 25px;
                 background-color: $primary-color;
@@ -79,7 +80,13 @@ p{
                 bottom: 25px;
                 font-weight: 400;
                 font-size: 0.9em;
-            }    
+            }
+            &:hover{
+                background-color: #9256dc18;
+                i{
+                    color: $primary-color;
+                }
+        }  
                 a{
                     flex-basis: 100%;
                     align-items: center;
@@ -107,13 +114,13 @@ p{
             margin: 30px 0px;
             width: 100%;
         }
-        article{
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 2px 6px 19px -7px rgba(0,0,0,0.31);
+        a{
             width: 100%;
             margin-bottom: 20px;
-            &:nth-child(3) img{
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 2px 6px 19px -7px rgba(0,0,0,0.31); 
+            &:nth-of-type(2) img{
                 object-position: 50% 60%;
             }
             figure{
@@ -181,16 +188,16 @@ p{
     #explorer >p{
         flex-basis: 90%
     }
-    #function{
+    #tutorial{
         li{
             max-width: 400px;
         }
     }
     #restaurant .menu-card-container{
         justify-content: space-between;
-        article{
+        a{
             flex-basis: 48%;
-            a > img{
+            img{
                 object-position: 50% 60%;
             }
         }
@@ -199,7 +206,7 @@ p{
     
     @media screen and (min-width: 992px){
 
-    #function{
+    #tutorial{
         max-width: 1100px;
         margin: 0 auto;
         ol{
