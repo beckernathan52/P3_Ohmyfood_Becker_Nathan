@@ -1,10 +1,10 @@
 footer{
     background-color: #353535;
     padding: 30px 20px 40px 20px;
-    span{
-        color: white;
+    .footer-container > a{
         font-family: 'shrikhand';
         font-size: 1.2em;
+        color: white;
     }
     nav{
         padding-top: 20px;

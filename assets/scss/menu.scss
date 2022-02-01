@@ -1,15 +1,5 @@
 @import "./main.scss";
 
-/* Header */
-header > a:first-child{
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    i{
-        font-size: 1.2em;
-    }
-}
-
 /* Main */
 main{
     display: flex;
@@ -40,7 +30,6 @@ main{
             padding: 0px 20px 40px 5px;
         }
         .button-container{
-            width: 100%;
             display: flex;
             justify-content: center;
             .btn{
@@ -56,25 +45,32 @@ section{
         padding-left: 5px;
         width: 100%;
         padding-bottom: 25px;
-        span{
+        position: relative;
+        &::before{
+            content: " ";
             border-bottom: solid 3px $tertiary-color;
             padding-bottom: 5px;
+            position: absolute;
+            width: 40px;
+            top: 15px;
         }
     }
     ul{
         padding-bottom: 40px;
         li{
             border-radius: 15px;
-            padding: 15px 10px;
             background-color: white;
             display: flex;
-            justify-content: space-between;
+            
             box-shadow: 2px 6px 19px -10px rgba(0,0,0,0.31);
             margin-bottom: 15px;
+            white-space: nowrap;
+            overflow: hidden;
             .dishes-details{
-                width: 80%;
+                width: 100%;
                 white-space: nowrap;
                 overflow: hidden;
+                padding: 15px 10px;
                 p{
                     font-weight: 300;
                     font-size: 1em;
@@ -91,7 +87,7 @@ section{
             }
             .price{
                 display: flex;
-                padding-right: 10px;
+                padding: 0px 5px 15px 0px;
                 align-items: flex-end;
                 font-weight: 500;
                 font-size: 0.9em;
@@ -133,6 +129,9 @@ section{
             }
             section{
                 width: 32%;
+            }
+            .button-container{
+                width: 100%;
             }
         }
     }

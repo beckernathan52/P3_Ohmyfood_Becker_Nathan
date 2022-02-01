@@ -1,0 +1,33 @@
+/* Animation check on menu items */
+.select{
+    background-color: $tertiary-color;
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    visibility: hidden;
+    transition: all 1s;
+    transform: translateX(30px);
+    flex-basis: 0;
+    i{
+        border-radius: 25px;
+        padding: 5px;
+        background-color: white;
+        color: $tertiary-color;
+        transition: transform 1s;
+    }
+}
+.menu li{
+    &:hover .select{
+    transform: translateX(0px);
+    flex-basis: 100px;
+    visibility: visible;
+    i{
+        transform: rotate(360deg); 
+    }
+    }
+}
+
+
