@@ -30,4 +30,31 @@
     }
 }
 
+/* Animation like menu on homepage */
 
+.heart-like{
+    position: relative;
+    
+    i:nth-of-type(1){
+        transition: all 330ms ease-in-out;
+        transform: scale(1);
+        position: absolute;
+    }
+    i:nth-of-type(2){
+        transform: scale(0);
+        z-index: 1;
+        background-clip: text;
+        background: linear-gradient(#FF79DA,#9356DC );
+        
+    }
+    &:hover{
+        i:nth-of-type(1){
+            transform: scale(0);
+            transition: all 330ms ease-in-out;
+        }
+        i:nth-of-type(2){
+            transform: scale(1);
+            transition: all 330ms ease-in-out;
+        }
+    }
+}
