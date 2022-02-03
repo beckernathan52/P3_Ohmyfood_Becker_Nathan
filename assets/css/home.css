@@ -120,13 +120,13 @@ body {
   background-color: white;
   color: #99E2D0;
   position: absolute;
-  left: 15px;
+  left: 25px;
   top: 25px;
 }
 
 .menu li:hover .select {
   width: auto;
-  padding: 25px;
+  padding: 25px 35px;
 }
 .menu li:hover .select i {
   transform: rotate(360deg);

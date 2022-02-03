@@ -63,6 +63,7 @@ section{
             display: flex;
             box-shadow: 2px 6px 19px -10px rgba(0,0,0,0.31);
             margin-bottom: 15px;
+            overflow: hidden;
             .dishes-details{
                 white-space: nowrap;
                 overflow: hidden;

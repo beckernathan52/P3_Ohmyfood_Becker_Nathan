@@ -7,7 +7,6 @@
     justify-content: center;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    // transition: all 1s;
     transition-duration: 1s;
     overflow: hidden;
     width: 0;
@@ -17,20 +16,15 @@
         padding: 3px;
         background-color: white;
         color: $tertiary-color;
-        
         position: absolute;
-        left: 15px;
+        left: 25px;
         top: 25px;
-        
-       
     }
 }
 .menu li{
     &:hover .select{
-    // transition-duration: 1s;
     width: auto;
-    padding: 25px;
-    
+    padding: 25px 35px;
     i{
         transform: rotate(360deg);
         transition-duration: 1s;
