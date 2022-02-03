@@ -61,13 +61,10 @@ section{
             border-radius: 15px;
             background-color: white;
             display: flex;
-            
             box-shadow: 2px 6px 19px -10px rgba(0,0,0,0.31);
             margin-bottom: 15px;
-            white-space: nowrap;
             overflow: hidden;
             .dishes-details{
-                width: 100%;
                 white-space: nowrap;
                 overflow: hidden;
                 padding: 15px 10px;
@@ -87,10 +84,12 @@ section{
             }
             .price{
                 display: flex;
-                padding: 0px 5px 15px 0px;
+                padding: 15px;
                 align-items: flex-end;
                 font-weight: 500;
                 font-size: 0.9em;
+                text-align: right;
+                margin-left: auto;
             }
         }
     }    
