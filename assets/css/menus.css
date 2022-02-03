@@ -109,26 +109,28 @@ body {
   justify-content: center;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  visibility: hidden;
-  transition: all 1s;
-  transform: translateX(30px);
-  flex-basis: 0;
+  transition-duration: 1s;
+  overflow: hidden;
+  width: 0;
+  position: relative;
 }
 .select i {
   border-radius: 25px;
-  padding: 5px;
+  padding: 3px;
   background-color: white;
   color: #99E2D0;
-  transition: transform 1s;
+  position: absolute;
+  left: 15px;
+  top: 25px;
 }
 
 .menu li:hover .select {
-  transform: translateX(0px);
-  flex-basis: 100px;
-  visibility: visible;
+  width: auto;
+  padding: 25px;
 }
 .menu li:hover .select i {
   transform: rotate(360deg);
+  transition-duration: 1s;
 }
 
 /* Animation like menu on homepage */
@@ -143,9 +145,10 @@ body {
 .heart-like i:nth-of-type(2) {
   transform: scale(0);
   z-index: 1;
+  background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
           background-clip: text;
-  background: linear-gradient(#FF79DA, #9356DC);
+  color: transparent;
 }
 .heart-like:hover i:nth-of-type(1) {
   transform: scale(0);
@@ -272,11 +275,8 @@ section ul li {
   display: flex;
   box-shadow: 2px 6px 19px -10px rgba(0, 0, 0, 0.31);
   margin-bottom: 15px;
-  white-space: nowrap;
-  overflow: hidden;
 }
 section ul li .dishes-details {
-  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   padding: 15px 10px;
@@ -296,10 +296,12 @@ section ul li .dishes-details h3 {
 }
 section ul li .price {
   display: flex;
-  padding: 0px 5px 15px 0px;
+  padding: 15px;
   align-items: flex-end;
   font-weight: 500;
   font-size: 0.9em;
+  text-align: right;
+  margin-left: auto;
 }
 
 /* Desktop Version */
