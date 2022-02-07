@@ -64,10 +64,19 @@ section{
             box-shadow: 2px 6px 19px -10px rgba(0,0,0,0.31);
             margin-bottom: 15px;
             overflow: hidden;
+            animation-name: list-appearance;
+            transition: all 0.5s;
+            animation-duration: 2s;
+            
+            animation-iteration-count: infinite;
             .dishes-details{
                 white-space: nowrap;
                 overflow: hidden;
                 padding: 15px 10px;
+                animation-name: list-appearance;
+                transition: all 0.5s;
+                animation-duration: 4s;
+                
                 p{
                     font-weight: 300;
                     font-size: 1em;
