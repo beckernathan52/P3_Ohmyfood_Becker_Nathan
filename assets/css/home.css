@@ -163,34 +163,42 @@ body {
 @-webkit-keyframes list-appearance {
   from {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(25px);
+    visibility: hidden;
   }
   to {
     opacity: 1;
     transform: translateY(0);
+    visibility: visible;
   }
 }
 @keyframes list-appearance {
   from {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(25px);
+    visibility: hidden;
   }
   to {
     opacity: 1;
     transform: translateY(0);
+    visibility: visible;
   }
 }
 .menu li:nth-of-type(1) {
-  transition-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 .menu li:nth-of-type(2) {
-  transition-delay: 0.3s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 .menu li:nth-of-type(3) {
-  transition-delay: 0.5s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 .menu li:nth-of-type(4) {
-  transition-delay: 0.7s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 footer {
