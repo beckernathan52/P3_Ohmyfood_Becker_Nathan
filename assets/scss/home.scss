@@ -10,37 +10,34 @@
     position: fixed;
     width: 100%;
     height: 100%;
+    visibility: hidden 3s;
     >span{
         font-family: 'shrikhand';
         font-size: 4em;
-        padding-bottom: 50px;
+        padding-bottom: 100px;
     }
     >div{
-    
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
     padding: 25px;
     animation: loading_spinner 1.5s infinite linear;
+    
         i{
             font-size: 2em;
             padding: 0px 3px;
             animation: loading_spinner 1s infinite linear ;
             animation-direction: reverse;
+            
         }       
-        span:nth-of-type(1){
+        .round1{
             display: inline-block;
             background-color: $primary-color;
             border-radius: 100%;
-            
             padding: 15px;
             position: absolute;
             right: 62px;
             top: 5px;
         }
-        span:nth-of-type(2){
+        .round2{
             display: inline-block;
             background-color: $secondary-color;
             border-radius: 100%;
@@ -48,9 +45,8 @@
             position: absolute;
             bottom: 47px;
             left: 62px;
-            
         }
-        span:nth-of-type(3){
+        .round3{
             display: inline-block;
             background-color: $tertiary-color;
             border-radius: 100%;
@@ -58,7 +54,6 @@
             position: absolute;
             top: 67px;
             right: 26px;
-            
         }
         
     }
