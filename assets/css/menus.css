@@ -201,6 +201,23 @@ body {
           animation-delay: 0.4s;
 }
 
+/* Loading spinner for homepage */
+@-webkit-keyframes loading_spinner {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading_spinner {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 footer {
   background-color: #353535;
   padding: 30px 20px 40px 20px;

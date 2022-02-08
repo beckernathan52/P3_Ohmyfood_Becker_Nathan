@@ -103,5 +103,12 @@
 /* Loading spinner for homepage */
 
 @keyframes loading_spinner{
-    
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
+
+
