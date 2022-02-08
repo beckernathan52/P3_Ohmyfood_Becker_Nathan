@@ -111,4 +111,9 @@
     }
 }
 
+@keyframes hide-loading-spinner{
+    to{
+        visibility: hidden;
+    }
+}
 
