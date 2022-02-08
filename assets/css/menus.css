@@ -218,6 +218,16 @@ body {
     transform: rotate(360deg);
   }
 }
+@-webkit-keyframes hide-loading-spinner-container {
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes hide-loading-spinner-container {
+  to {
+    visibility: hidden;
+  }
+}
 footer {
   background-color: #353535;
   padding: 30px 20px 40px 20px;

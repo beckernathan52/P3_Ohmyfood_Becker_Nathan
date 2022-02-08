@@ -218,6 +218,16 @@ body {
     transform: rotate(360deg);
   }
 }
+@-webkit-keyframes hide-loading-spinner-container {
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes hide-loading-spinner-container {
+  to {
+    visibility: hidden;
+  }
+}
 footer {
   background-color: #353535;
   padding: 30px 20px 40px 20px;
@@ -270,6 +280,7 @@ header a:nth-of-type(1) {
   font-size: 1.2em;
 }
 
+/* Loading spinner for homepage */
 #loading-spinner {
   background-color: white;
   display: flex;
@@ -280,7 +291,10 @@ header a:nth-of-type(1) {
   position: fixed;
   width: 100%;
   height: 100%;
-  visibility: hidden 3s;
+  -webkit-animation: hide-loading-spinner-container 3s;
+          animation: hide-loading-spinner-container 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 #loading-spinner > span {
   font-family: "shrikhand";
