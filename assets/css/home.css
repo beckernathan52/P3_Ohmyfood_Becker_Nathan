@@ -315,31 +315,31 @@ header a:nth-of-type(1) {
   animation-direction: reverse;
 }
 #loading-spinner > div .round1 {
-  display: inline-block;
   background-color: #9356DC;
-  border-radius: 100%;
-  padding: 15px;
-  position: absolute;
   right: 62px;
   top: 5px;
+  display: inline-block;
+  border-radius: 100%;
+  padding: 15px;
+  position: absolute;
 }
 #loading-spinner > div .round2 {
-  display: inline-block;
   background-color: #FF79DA;
-  border-radius: 100%;
-  padding: 15px;
-  position: absolute;
   bottom: 47px;
   left: 62px;
-}
-#loading-spinner > div .round3 {
   display: inline-block;
-  background-color: #99E2D0;
   border-radius: 100%;
   padding: 15px;
   position: absolute;
+}
+#loading-spinner > div .round3 {
+  background-color: #99E2D0;
   top: 67px;
   right: 26px;
+  display: inline-block;
+  border-radius: 100%;
+  padding: 15px;
+  position: absolute;
 }
 
 h1, h2, h3 {

@@ -22,44 +22,35 @@
     position: relative;
     padding: 25px;
     animation: loading_spinner 1.5s infinite linear;
-    
         i{
             font-size: 2em;
             padding: 0px 3px;
             animation: loading_spinner 1s infinite linear ;
             animation-direction: reverse;
-            
         }       
         .round1{
-            display: inline-block;
             background-color: $primary-color;
-            border-radius: 100%;
-            padding: 15px;
-            position: absolute;
             right: 62px;
             top: 5px;
+            @include round-loading-spinner;
         }
         .round2{
-            display: inline-block;
             background-color: $secondary-color;
-            border-radius: 100%;
-            padding: 15px;
-            position: absolute;
             bottom: 47px;
             left: 62px;
+            @include round-loading-spinner;
         }
         .round3{
-            display: inline-block;
             background-color: $tertiary-color;
-            border-radius: 100%;
-            padding: 15px;
-            position: absolute;
             top: 67px;
             right: 26px;
+            @include round-loading-spinner;
         }
         
     }
 }
+
+
 h1,h2,h3{
     font-weight: bold;
 }
@@ -72,6 +63,7 @@ h3{
 p{
     font-weight: 350;
 }
+
 #location{
     display: flex;
     align-items: center;
