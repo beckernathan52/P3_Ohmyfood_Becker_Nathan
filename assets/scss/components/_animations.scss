@@ -34,7 +34,6 @@
 
 
 /* Animation like menu on homepage */
-
 .heart-like{
     position: relative;
     i:nth-of-type(1){
@@ -62,8 +61,7 @@
 }
 
 
-/* Animation list on menu page */
-
+/* Animation list appearance on menu page */
 @keyframes list-appearance{
     from{
         opacity: 0;
@@ -79,24 +77,79 @@
 .menu{
     li:nth-of-type(1){
         animation-delay: 0.1s ;
-        
-        
     }
     li:nth-of-type(2){
         animation-delay: 0.2s ;
-        
-        
     }
     li:nth-of-type(3){
         animation-delay: 0.3s ;
-        
-        
     }
     li:nth-of-type(4){
         animation-delay: 0.4s ;
-        
-        
     }
 }
 
 
+/* Loading spinner for homepage */
+@keyframes loading_spinner{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes hide-loading-spinner-container{
+    to{
+        visibility: hidden;
+    }
+}
+
+#loading-spinner{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    z-index: 1;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    animation: hide-loading-spinner-container 3s;
+    animation-fill-mode: forwards;
+    >span{
+        font-family: 'shrikhand';
+        font-size: 4em;
+        padding-bottom: 100px;
+    }
+    >div{
+        position: relative;
+        padding: 25px;
+        animation: loading_spinner 1.5s infinite linear;
+        i{
+            font-size: 2em;
+            padding: 0px 3px;
+            animation: loading_spinner 1s infinite linear ;
+            animation-direction: reverse;
+        }       
+        .round1{
+            background-color: $primary-color;
+            right: 62px;
+            top: 5px;
+            @include round-loading-spinner;
+        }
+        .round2{
+            background-color: $secondary-color;
+            bottom: 47px;
+            left: 62px;
+            @include round-loading-spinner;
+        }
+        .round3{
+            background-color: $tertiary-color;
+            top: 67px;
+            right: 26px;
+            @include round-loading-spinner;
+        } 
+    }
+}

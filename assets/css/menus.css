@@ -201,6 +201,94 @@ body {
           animation-delay: 0.4s;
 }
 
+/* Loading spinner for homepage */
+@-webkit-keyframes loading_spinner {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading_spinner {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes hide-loading-spinner-container {
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes hide-loading-spinner-container {
+  to {
+    visibility: hidden;
+  }
+}
+#loading-spinner {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: hide-loading-spinner-container 3s;
+          animation: hide-loading-spinner-container 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+#loading-spinner > span {
+  font-family: "shrikhand";
+  font-size: 4em;
+  padding-bottom: 100px;
+}
+#loading-spinner > div {
+  position: relative;
+  padding: 25px;
+  -webkit-animation: loading_spinner 1.5s infinite linear;
+          animation: loading_spinner 1.5s infinite linear;
+}
+#loading-spinner > div i {
+  font-size: 2em;
+  padding: 0px 3px;
+  -webkit-animation: loading_spinner 1s infinite linear;
+          animation: loading_spinner 1s infinite linear;
+  animation-direction: reverse;
+}
+#loading-spinner > div .round1 {
+  background-color: #9356DC;
+  right: 62px;
+  top: 5px;
+  display: inline-block;
+  border-radius: 100%;
+  padding: 15px;
+  position: absolute;
+}
+#loading-spinner > div .round2 {
+  background-color: #FF79DA;
+  bottom: 47px;
+  left: 62px;
+  display: inline-block;
+  border-radius: 100%;
+  padding: 15px;
+  position: absolute;
+}
+#loading-spinner > div .round3 {
+  background-color: #99E2D0;
+  top: 67px;
+  right: 26px;
+  display: inline-block;
+  border-radius: 100%;
+  padding: 15px;
+  position: absolute;
+}
+
 footer {
   background-color: #353535;
   padding: 30px 20px 40px 20px;

@@ -1,0 +1,10 @@
+@mixin round-loading-spinner{
+    display: inline-block;
+    border-radius: 100%;
+    padding: 15px;
+    position: absolute;
+}
+
+@mixin box-shadow{
+    box-shadow: 2px 6px 19px -7px rgba(0,0,0,0.31);
+}
