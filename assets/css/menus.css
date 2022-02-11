@@ -161,7 +161,6 @@ body {
 /* Animation list appearance on menu page */
 @-webkit-keyframes list-appearance {
   from {
-    opacity: 0;
     transform: translateY(25px);
   }
   to {
@@ -171,7 +170,6 @@ body {
 }
 @keyframes list-appearance {
   from {
-    opacity: 0;
     transform: translateY(25px);
   }
   to {
