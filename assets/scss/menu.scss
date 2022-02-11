@@ -66,6 +66,8 @@ section{
             overflow: hidden;
             animation-name: list-appearance;
             animation-duration: 1s;
+            animation-fill-mode: forwards;
+            opacity: 0;
             .dishes-details{
                 white-space: nowrap;
                 overflow: hidden;

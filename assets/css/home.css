@@ -109,7 +109,7 @@ body {
   justify-content: center;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  transition-duration: 1s;
+  transition: all ease-in 1s;
   overflow: hidden;
   width: 0;
   position: relative;
@@ -122,6 +122,7 @@ body {
   position: absolute;
   left: 25px;
   top: 25px;
+  transition: all ease-in 1s;
 }
 
 .menu li:hover .select {
@@ -129,8 +130,7 @@ body {
   padding: 25px 35px;
 }
 .menu li:hover .select i {
-  transform: rotate(360deg);
-  transition-duration: 1s;
+  transform: rotate(-360deg);
 }
 
 /* Animation like menu on homepage */
@@ -139,49 +139,44 @@ body {
 }
 .heart-like i:nth-of-type(1) {
   transition: all 330ms ease-in-out;
-  transform: scale(1);
   position: absolute;
+  z-index: 0;
 }
 .heart-like i:nth-of-type(2) {
   transform: scale(0);
-  z-index: 1;
+  z-index: 2;
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
+  transition: all 330ms ease-in-out;
 }
 .heart-like:hover i:nth-of-type(1) {
   transform: scale(0);
-  transition: all 330ms ease-in-out;
 }
 .heart-like:hover i:nth-of-type(2) {
-  transform: scale(1);
-  transition: all 330ms ease-in-out;
+  transform: scale(1.2);
 }
 
-/* Animation list on menu page */
+/* Animation list appearance on menu page */
 @-webkit-keyframes list-appearance {
   from {
     opacity: 0;
     transform: translateY(25px);
-    visibility: hidden;
   }
   to {
     opacity: 1;
     transform: translateY(0);
-    visibility: visible;
   }
 }
 @keyframes list-appearance {
   from {
     opacity: 0;
     transform: translateY(25px);
-    visibility: hidden;
   }
   to {
     opacity: 1;
     transform: translateY(0);
-    visibility: visible;
   }
 }
 .menu li:nth-of-type(1) {
@@ -219,13 +214,29 @@ body {
   }
 }
 @-webkit-keyframes hide-loading-spinner-container {
-  to {
-    visibility: hidden;
+  65% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+    z-index: 1;
+  }
+  100% {
+    z-index: -50;
+    opacity: 0;
   }
 }
 @keyframes hide-loading-spinner-container {
-  to {
-    visibility: hidden;
+  65% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+    z-index: 1;
+  }
+  100% {
+    z-index: -50;
+    opacity: 0;
   }
 }
 #loading-spinner {

@@ -7,7 +7,7 @@
     justify-content: center;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    transition-duration: 1s;
+    transition: all ease-in 1s;
     overflow: hidden;
     width: 0;
     position: relative;
@@ -19,6 +19,7 @@
         position: absolute;
         left: 25px;
         top: 25px;
+        transition: all ease-in 1s;
     }
 }
 .menu li{
@@ -26,8 +27,8 @@
     width: auto;
     padding: 25px 35px;
     i{
-        transform: rotate(360deg);
-        transition-duration: 1s;
+        transform: rotate(-360deg);
+        // transition-duration: 1s;
     }
     }
 }
@@ -38,24 +39,26 @@
     position: relative;
     i:nth-of-type(1){
         transition: all 330ms ease-in-out;
-        transform: scale(1);
+        // transform: scale(1);
         position: absolute;
+        z-index: 0;
     }
     i:nth-of-type(2){
         transform: scale(0);
-        z-index: 1;
+        z-index: 2;
         background: linear-gradient(#9356DC,#FF79DA);
         background-clip: text;
         color: transparent;
+        transition: all 330ms ease-in-out;
     }
     &:hover{
         i:nth-of-type(1){
             transform: scale(0);
-            transition: all 330ms ease-in-out;
+          
         }
         i:nth-of-type(2){
-            transform: scale(1);
-            transition: all 330ms ease-in-out;
+            transform: scale(1.2);
+          
         }
     }
 }
@@ -66,12 +69,12 @@
     from{
         opacity: 0;
         transform: translateY(25px);
-        visibility: hidden;
+        
     }
     to{
         opacity: 1;
         transform: translateY(0);
-        visibility: visible;
+        
     }
 }
 .menu{
@@ -101,8 +104,16 @@
 }
 
 @keyframes hide-loading-spinner-container{
-    to{
-        visibility: hidden;
+    65%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 0;
+        z-index: 1;
+    }
+    100%{
+        z-index: -50;
+        opacity: 0;
     }
 }
 
