@@ -2,9 +2,6 @@
 .select{
     background-color: $tertiary-color;
     color: white;
-    align-items: center;
-    display: flex;
-    justify-content: center;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     transition:  ease-in-out 0.5s;
@@ -26,6 +23,7 @@
     &:hover .select{
     width: auto;
     padding: 25px 35px;
+    cursor: pointer;
     i{
         transform: rotate(360deg);
         transition: transform 0.5s linear;
@@ -55,6 +53,7 @@
         }
         i:nth-of-type(2){
             transform: scale(1);
+            cursor: pointer;
         }
     }
 }

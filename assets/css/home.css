@@ -104,9 +104,6 @@ body {
 .select {
   background-color: #99E2D0;
   color: white;
-  align-items: center;
-  display: flex;
-  justify-content: center;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   transition: ease-in-out 0.5s;
@@ -127,6 +124,7 @@ body {
 .menu li:hover .select {
   width: auto;
   padding: 25px 35px;
+  cursor: pointer;
 }
 .menu li:hover .select i {
   transform: rotate(360deg);
@@ -155,6 +153,7 @@ body {
 }
 .heart-like:hover i:nth-of-type(2) {
   transform: scale(1);
+  cursor: pointer;
 }
 
 /* Animation list appearance on menu page */

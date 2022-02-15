@@ -17,7 +17,7 @@ main{
     }
     .menu{
         width: 100%;
-        padding: 40px 15px 50px 15px;
+        padding: 40px 0px 50px 0px;
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
         background-color: #f6f6f6;
@@ -27,7 +27,10 @@ main{
             display: flex;
             flex-basis: 100%;
             justify-content: space-between;
-            padding: 0px 20px 40px 5px;
+            padding: 0px 30px 40px 20px;
+            i{
+                font-size: 25px;
+            }
         }
         .button-container{
             display: flex;
@@ -40,6 +43,7 @@ main{
 }
 
 section{
+    margin: 0px 15px;
     h2{
         font-weight: 350;
         padding-left: 5px;
@@ -88,7 +92,8 @@ section{
             }
             .price{
                 display: flex;
-                padding: 15px;
+                padding: 15px 0px;
+                margin-right: 15px;
                 align-items: flex-end;
                 font-weight: 500;
                 font-size: 0.9em;
@@ -131,6 +136,7 @@ section{
             }
             section{
                 width: 32%;
+                margin: 0;
             }
             .button-container{
                 width: 100%;

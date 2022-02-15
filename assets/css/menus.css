@@ -104,9 +104,6 @@ body {
 .select {
   background-color: #99E2D0;
   color: white;
-  align-items: center;
-  display: flex;
-  justify-content: center;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   transition: ease-in-out 0.5s;
@@ -127,6 +124,7 @@ body {
 .menu li:hover .select {
   width: auto;
   padding: 25px 35px;
+  cursor: pointer;
 }
 .menu li:hover .select i {
   transform: rotate(360deg);
@@ -155,6 +153,7 @@ body {
 }
 .heart-like:hover i:nth-of-type(2) {
   transform: scale(1);
+  cursor: pointer;
 }
 
 /* Animation list appearance on menu page */
@@ -368,7 +367,7 @@ main figure img {
 }
 main .menu {
   width: 100%;
-  padding: 40px 15px 50px 15px;
+  padding: 40px 0px 50px 0px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   background-color: #f6f6f6;
@@ -379,7 +378,10 @@ main .menu h1 {
   display: flex;
   flex-basis: 100%;
   justify-content: space-between;
-  padding: 0px 20px 40px 5px;
+  padding: 0px 30px 40px 20px;
+}
+main .menu h1 i {
+  font-size: 25px;
 }
 main .menu .button-container {
   display: flex;
@@ -389,6 +391,9 @@ main .menu .button-container .btn {
   max-width: 150px;
 }
 
+section {
+  margin: 0px 15px;
+}
 section h2 {
   font-weight: 350;
   padding-left: 5px;
@@ -426,6 +431,7 @@ section ul li .dishes-details {
   white-space: nowrap;
   overflow: hidden;
   padding: 15px 10px;
+  position: relative;
 }
 section ul li .dishes-details p {
   font-weight: 300;
@@ -442,7 +448,8 @@ section ul li .dishes-details h3 {
 }
 section ul li .price {
   display: flex;
-  padding: 15px;
+  padding: 15px 0px;
+  margin-right: 15px;
   align-items: flex-end;
   font-weight: 500;
   font-size: 0.9em;
@@ -484,6 +491,7 @@ section ul li .price {
   }
   main .menu section {
     width: 32%;
+    margin: 0;
   }
   main .menu .button-container {
     width: 100%;
