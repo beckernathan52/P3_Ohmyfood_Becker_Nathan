@@ -93,11 +93,10 @@ body {
   font-family: "roboto";
   justify-content: center;
   transition: all 0.4s;
-  box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.4);
 }
 .btn:hover {
   opacity: 0.9;
-  box-shadow: 8px 10px 19px -7px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 10px 19px -4px rgba(0, 0, 0, 0.4);
 }
 
 /* Animation check on menu items */
@@ -136,7 +135,7 @@ body {
   position: relative;
 }
 .heart-like i:nth-of-type(1) {
-  transition: all 330ms ease-in-out;
+  transition: 330ms ease-in-out;
   transform: scale(1);
   position: absolute;
 }
@@ -146,7 +145,7 @@ body {
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
-  transition: all 330ms ease-in-out;
+  transition: 330ms ease-in-out;
 }
 .heart-like:hover i:nth-of-type(1) {
   transform: scale(0);
@@ -431,7 +430,6 @@ section ul li .dishes-details {
   white-space: nowrap;
   overflow: hidden;
   padding: 15px 10px;
-  position: relative;
 }
 section ul li .dishes-details p {
   font-weight: 300;
