@@ -94,7 +94,7 @@ body {
   justify-content: center;
   transition: all 0.4s;
 }
-.btn:hover {
+.btn:hover, .btn:active {
   opacity: 0.9;
   box-shadow: 0px 10px 19px -4px rgba(0, 0, 0, 0.4);
 }
@@ -120,12 +120,12 @@ body {
   top: 25px;
 }
 
-.menu li:hover .select {
+.menu li:hover .select, .menu li:active .select {
   width: auto;
   padding: 25px 35px;
   cursor: pointer;
 }
-.menu li:hover .select i {
+.menu li:hover .select i, .menu li:active .select i {
   transform: rotate(360deg);
   transition: transform 0.5s linear;
 }
@@ -147,10 +147,10 @@ body {
   color: transparent;
   transition: 330ms ease-in-out;
 }
-.heart-like:hover i:nth-of-type(1) {
+.heart-like:hover i:nth-of-type(1), .heart-like:active i:nth-of-type(1) {
   transform: scale(0);
 }
-.heart-like:hover i:nth-of-type(2) {
+.heart-like:hover i:nth-of-type(2), .heart-like:active i:nth-of-type(2) {
   transform: scale(1);
   cursor: pointer;
 }
