@@ -2,12 +2,9 @@
 .select{
     background-color: $tertiary-color;
     color: white;
-    align-items: center;
-    display: flex;
-    justify-content: center;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    transition-duration: 1s;
+    transition:  ease-in-out 0.5s;
     overflow: hidden;
     width: 0;
     position: relative;
@@ -25,37 +22,37 @@
     &:hover .select{
     width: auto;
     padding: 25px 35px;
+    cursor: pointer;
     i{
         transform: rotate(360deg);
-        transition-duration: 1s;
+        transition: transform 0.5s linear;
     }
     }
 }
 
 
-/* Animation like menu on homepage */
+/* Animation like menu */
 .heart-like{
     position: relative;
     i:nth-of-type(1){
-        transition: all 330ms ease-in-out;
+        transition: 330ms ease-in-out;
         transform: scale(1);
         position: absolute;
     }
     i:nth-of-type(2){
         transform: scale(0);
-        z-index: 1;
         background: linear-gradient(#9356DC,#FF79DA);
         background-clip: text;
         color: transparent;
+        transition: 330ms ease-in-out;
     }
     &:hover{
         i:nth-of-type(1){
             transform: scale(0);
-            transition: all 330ms ease-in-out;
         }
         i:nth-of-type(2){
             transform: scale(1);
-            transition: all 330ms ease-in-out;
+            cursor: pointer;
         }
     }
 }
@@ -64,16 +61,14 @@
 /* Animation list appearance on menu page */
 @keyframes list-appearance{
     from{
-        opacity: 0;
         transform: translateY(25px);
-        visibility: hidden;
     }
     to{
         opacity: 1;
         transform: translateY(0);
-        visibility: visible;
     }
 }
+
 .menu{
     li:nth-of-type(1){
         animation-delay: 0.1s ;
@@ -101,8 +96,16 @@
 }
 
 @keyframes hide-loading-spinner-container{
-    to{
-        visibility: hidden;
+    65%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 0;
+        z-index: 1;
+    }
+    100%{
+        z-index: -50;
+        opacity: 0;
     }
 }
 
