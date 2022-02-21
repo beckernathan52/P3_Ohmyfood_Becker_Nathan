@@ -327,14 +327,13 @@ footer nav li a i {
   }
 }
 header {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 header a:nth-of-type(1) {
-  width: 170px;
   padding: 20px 0px 10px 0px;
   font-family: shrikhand;
   font-size: 1.9em;
+  display: inline-block;
 }
 
 /* Icon return to home on menu page*/
@@ -422,6 +421,18 @@ form input {
   background-color: #f6f6f6;
   box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31);
 }
+#tutorial ol li a {
+  flex-basis: 100%;
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+#tutorial ol li a i {
+  padding: 30px;
+  color: grey;
+  font-size: 1.1em;
+  width: 15px;
+}
 #tutorial ol li::before {
   counter-increment: compteListe 1;
   content: counter(compteListe);
@@ -440,18 +451,6 @@ form input {
 }
 #tutorial ol li:hover i {
   color: #9356DC;
-}
-#tutorial ol li a {
-  flex-basis: 100%;
-  align-items: center;
-  display: flex;
-  height: 100%;
-}
-#tutorial ol li a i {
-  padding: 30px;
-  color: grey;
-  font-size: 1.1em;
-  width: 15px;
 }
 
 #restaurant {
@@ -515,9 +514,7 @@ form input {
   position: absolute;
   right: 0px;
   bottom: 25px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 #restaurant .menu-card-container a .card-container .heart-like i {
   font-size: 1.5em;
@@ -525,7 +522,7 @@ form input {
   opacity: 0.7;
 }
 
-/* Responsive */
+/* Responsive Tablette version */
 @media screen and (min-width: 475px) {
   #restaurant article:first-child img {
     -o-object-position: 50% 50%;
@@ -556,6 +553,7 @@ form input {
        object-position: 50% 60%;
   }
 }
+/* Responsive Desktop version */
 @media screen and (min-width: 992px) {
   #tutorial {
     max-width: 1100px;
