@@ -94,7 +94,7 @@ body {
   justify-content: center;
   transition: all 0.4s;
 }
-.btn:hover {
+.btn:hover, .btn:active {
   opacity: 0.9;
   box-shadow: 0px 10px 19px -4px rgba(0, 0, 0, 0.4);
 }
@@ -120,12 +120,12 @@ body {
   top: 25px;
 }
 
-.menu li:hover .select {
+.menu li:hover .select, .menu li:active .select {
   width: auto;
   padding: 25px 35px;
   cursor: pointer;
 }
-.menu li:hover .select i {
+.menu li:hover .select i, .menu li:active .select i {
   transform: rotate(360deg);
   transition: transform 0.5s linear;
 }
@@ -147,10 +147,10 @@ body {
   color: transparent;
   transition: 330ms ease-in-out;
 }
-.heart-like:hover i:nth-of-type(1) {
+.heart-like:hover i:nth-of-type(1), .heart-like:active i:nth-of-type(1) {
   transform: scale(0);
 }
-.heart-like:hover i:nth-of-type(2) {
+.heart-like:hover i:nth-of-type(2), .heart-like:active i:nth-of-type(2) {
   transform: scale(1);
   cursor: pointer;
 }
@@ -322,19 +322,18 @@ footer nav li a i {
 
 @media screen and (min-width: 992px) {
   footer .footer-container {
-    width: 1100px;
+    max-width: 1100px;
     margin: 0 auto;
   }
 }
 header {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 header a:nth-of-type(1) {
-  width: 170px;
   padding: 20px 0px 10px 0px;
   font-family: shrikhand;
   font-size: 1.9em;
+  display: inline-block;
 }
 
 /* Icon return to home on menu page*/
@@ -363,7 +362,7 @@ p {
   font-weight: 350;
 }
 
-#location {
+form {
   display: flex;
   align-items: center;
   background-color: #EAEAEA;
@@ -371,11 +370,11 @@ p {
   box-shadow: inset -2px 2px 6px rgba(54, 54, 54, 0.2);
   height: 45px;
 }
-#location label {
+form label {
   padding-right: 15px;
   color: #353535;
 }
-#location input {
+form input {
   color: black;
   border: none;
   background-color: #EAEAEA;
@@ -385,13 +384,14 @@ p {
 
 #explorer {
   background-color: #F6F6F6;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
   text-align: center;
   padding: 50px 30px;
-  row-gap: 20px;
+}
+#explorer h1, #explorer p {
+  margin-bottom: 20px;
+}
+#explorer a {
+  display: inline-block;
 }
 #explorer p {
   font-weight: 200;
@@ -422,6 +422,18 @@ p {
   background-color: #f6f6f6;
   box-shadow: 2px 6px 19px -7px rgba(0, 0, 0, 0.31);
 }
+#tutorial ol li a {
+  flex-basis: 100%;
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+#tutorial ol li a i {
+  padding: 30px;
+  color: grey;
+  font-size: 1.1em;
+  width: 15px;
+}
 #tutorial ol li::before {
   counter-increment: compteListe 1;
   content: counter(compteListe);
@@ -440,18 +452,6 @@ p {
 }
 #tutorial ol li:hover i {
   color: #9356DC;
-}
-#tutorial ol li a {
-  flex-basis: 100%;
-  align-items: center;
-  display: flex;
-  height: 100%;
-}
-#tutorial ol li a i {
-  padding: 30px;
-  color: grey;
-  font-size: 1.1em;
-  width: 15px;
 }
 
 #restaurant {
@@ -515,9 +515,7 @@ p {
   position: absolute;
   right: 0px;
   bottom: 25px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 #restaurant .menu-card-container a .card-container .heart-like i {
   font-size: 1.5em;
@@ -525,7 +523,7 @@ p {
   opacity: 0.7;
 }
 
-/* Responsive */
+/* Responsive Tablette version */
 @media screen and (min-width: 475px) {
   #restaurant article:first-child img {
     -o-object-position: 50% 50%;
@@ -556,6 +554,7 @@ p {
        object-position: 50% 60%;
   }
 }
+/* Responsive Desktop version */
 @media screen and (min-width: 992px) {
   #tutorial {
     max-width: 1100px;

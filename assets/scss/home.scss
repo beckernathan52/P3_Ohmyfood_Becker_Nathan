@@ -13,7 +13,7 @@ p{
     font-weight: 350;
 }
 
-#location{
+form{
     display: flex;
     align-items: center;
     background-color: #EAEAEA;
@@ -35,13 +35,14 @@ p{
 
 #explorer{
     background-color: #F6F6F6;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
     text-align: center;
     padding: 50px 30px;
-    row-gap: 20px;
+    h1,p{
+        margin-bottom: 20px;
+    }
+    a{
+        display: inline-block;
+    }
     p{
         font-weight: 200;
         font-size: 1.1em;
@@ -69,6 +70,18 @@ p{
             position: relative;
             background-color: #f6f6f6;
             @include box-shadow;
+            a{
+                flex-basis: 100%;
+                align-items: center;
+                display: flex;
+                height: 100%;
+                i{
+                    padding: 30px;
+                    color: grey;
+                    font-size: 1.1em;
+                    width: 15px;
+                }    
+            } 
             &::before{
                 counter-increment: compteListe 1;
                 content: counter(compteListe);
@@ -87,20 +100,8 @@ p{
                 i{
                     color: $primary-color;
                 }
-        }  
-                a{
-                    flex-basis: 100%;
-                    align-items: center;
-                    display: flex;
-                    height: 100%;
-                    i{
-                        padding: 30px;
-                        color: grey;
-                        font-size: 1.1em;
-                        width: 15px;
-                    }    
-                }    
             }
+        }
     }
 }
 
@@ -158,9 +159,7 @@ p{
                     position: absolute;
                     right: 0px;
                     bottom: 25px;
-                    align-items: center;
-                    display: flex;
-                    justify-content: center;
+                    text-align: center;
                     i{
                         font-size: 1.5em;
                         padding: 5px;
@@ -172,55 +171,62 @@ p{
     }
 }
 
-    /* Responsive */
+    /* Responsive Tablette version */
     @media screen and (min-width: 475px){
 
-    #restaurant article{
-        &:first-child img{
-            object-position: 50% 50%;
-        }
-    }
-    }
-
-    @media screen and (min-width: 550px){
-    .btn{
-        max-width: 200px;
-    }
-    #explorer >p{
-        flex-basis: 90%
-    }
-    #tutorial{
-        li{
-            max-width: 400px;
-        }
-    }
-    #restaurant .menu-card-container{
-        justify-content: space-between;
-        a{
-            flex-basis: 48%;
-            img{
-                object-position: 50% 60%;
+        #restaurant article{
+            &:first-child img{
+                object-position: 50% 50%;
             }
         }
     }
-    }
+
     
-    @media screen and (min-width: 992px){
+    @media screen and (min-width: 550px){
 
-    #tutorial{
-        max-width: 1100px;
-        margin: 0 auto;
-        ol{
-            flex-direction: row;
-            justify-content: space-between;
+        .btn{
+            max-width: 200px;
+        }
+
+        #explorer >p{
+            flex-basis: 90%
+        }
+
+        #tutorial{
             li{
-                margin-left: 20px;
-                margin-right: 20px;
+                max-width: 400px;
+            }
+        }
+
+        #restaurant .menu-card-container{
+            justify-content: space-between;
+            a{
+                flex-basis: 48%;
+                img{
+                    object-position: 50% 60%;
+                }
             }
         }
     }
-    #restaurant .menu-card-container{
-        max-width: 1100px;
-        margin: 0 auto;
-    }
-    }
+
+        /* Responsive Desktop version */
+        @media screen and (min-width: 992px){
+
+            #tutorial{
+                max-width: 1100px;
+                margin: 0 auto;
+                ol{
+                    flex-direction: row;
+                    justify-content: space-between;
+                    li{
+                        margin-left: 20px;
+                        margin-right: 20px;
+                    }
+                }
+            }
+
+            #restaurant .menu-card-container{
+                max-width: 1100px;
+                margin: 0 auto;
+            }
+        }

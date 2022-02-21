@@ -1,11 +1,11 @@
 header{
-    display: flex;
-    justify-content: center;  
+    text-align: center;
     a:nth-of-type(1){
-    width: 170px;
+    // width: 170px;
     padding: 20px 0px 10px 0px;
     font-family: shrikhand;
     font-size: 1.9em;
+    display: inline-block;
     }      
 }
 
